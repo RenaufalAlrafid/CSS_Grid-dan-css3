@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Sederhana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="hero">
+                <h2 class="heading">TOKO MERCH SHOP</h2>
+                <p class="sub-heading">Apapu Ada disini</p>
+            </div>
+            <div class="fitur fitur-1">
+                <h4 class="price">IDR 200k</h4>
+                <p class="item"> Computer </p>
+            </div>
+            <div class="fitur fitur-2">
+                <h4 class="price">IDR 300k</h4>
+                <p class="item"> Yolo</p>
+            </div>
+        </header>
+        <nav class="menu">
+            <div class="menu-toogle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="brand">
+                <h1>YOLO COMPUTER</h1>
+            </div>
+            <ul class="menu-list">
+                <li><a href="">home</a></li>
+                <li><a href="">product</a></li>
+                <li><a href="">abaout</a></li>
+                <li><a href="">galeri</a></li>
+            </ul>
+        </nav>
+        <section class="services">
+            <div class="service">
+                <div class="icon">Gbr</div>
+                <h3>tutorial</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae molestias quibusdam illo nihil aliquid consequatur.</p>
+            </div>
+
+            <div class="service">
+                <div class="icon">Gbr</div>
+                <h3>Online Course</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae molestias quibusdam illo nihil aliquid consequatur.</p>
+            </div>
+
+            <div class="service">
+                <div class="icon">Gbr</div>
+                <h3>Podcast</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae molestias quibusdam illo nihil aliquid consequatur.</p>
+            </div>
+
+            <div class="service">
+                <div class="icon">Gbr</div>
+                <h3>yolo</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae molestias quibusdam illo nihil aliquid consequatur.</p>
+            </div>
+        </section>
+
+        <section class="galeri">
+            <h2>galeri</h2>
+
+            <img src="https://source.unsplash.com/random/201x201" alt="" class="">
+            <img src="https://source.unsplash.com/random/202x202" alt="" class="">
+            <img src="https://source.unsplash.com/random/203x203" alt="" class="">
+            <img src="https://source.unsplash.com/random/204x204" alt="" class="">
+            <img src="https://source.unsplash.com/random/205x205" alt="" class="">
+            <img src="https://source.unsplash.com/random/206x206" alt="" class="">
+            <img src="https://source.unsplash.com/random/207x207" alt="" class="">
+            <img src="https://source.unsplash.com/random/208x208" alt="" class="">
+            <img src="https://source.unsplash.com/random/209x209" alt="" class="">
+            <img src="https://source.unsplash.com/random/2010x2010" alt="" class="">
+        </section>
+    </div>
+
+    <script>
+        const menuToogle = document.querySelector('.menu-toogle input');
+
+        const nav = document.querySelector('nav ul');
+
+        menuToogle.addEventListener('click', function () {
+            nav.classList.toggle('slide');
+        });
+    </script>
+
+</body>
+
+</html>

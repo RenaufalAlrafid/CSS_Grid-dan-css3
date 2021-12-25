@@ -1,0 +1,163 @@
+body {
+    font-size: 18px;
+    line-height: 36px;
+    ;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #eee;
+}
+
+h1 {
+    font-size: 80px;
+    margin: 50px 0;
+    text-align: center;
+    text-shadow: 1px 1px 1px white;
+}
+
+.container {
+    width: 600px;
+    background-color: white;
+    margin: auto;
+    padding: 30px;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.galeri {
+    display: flex;
+
+}
+
+.galeri li {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    /* overflow: hidden; */
+    border: 5px solid #666;
+    margin-right: 20px;
+    position: relative;
+}
+
+.galeri li span {
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(200, 200, 200, .5);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 120px;
+    color: #333;
+    text-shadow: 1px 1px 1px #ddd;
+    opacity: 0;
+    transform: scale(0) rotate(0);
+    transition: 300ms;
+}
+
+.galeri li a:hover span {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+
+}
+
+.galeri li img {
+    border-radius: 50%;
+}
+
+/* overlay */
+.overlay {
+    display: grid;
+    grid-template-areas: 
+    'close close close'
+    'previous image next';
+    grid-template-columns: 25% 50% 25%;
+    gap: 10px ;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    transition: 1s;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.galeri .overlay img {
+    grid-area: image;
+    border-radius: 0px;
+    max-height: 100%;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.8);
+}
+
+.overlay:target img {
+    animation: zoomdanfade 0.75s;
+}
+
+.overlay .close {
+    grid-area: close;
+    display: flex;
+    width: 100px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border: 1px solid white;
+    opacity: 0;
+
+}
+
+.overlay:target .close {
+    animation: slidedownfade .5s 1s forwards;
+}
+
+.next{
+    grid-area: next;
+    display: flex;
+    background-color: black;
+}
+
+.previous{
+    grid-area: previous;
+    display: flex;
+    background-color: black;
+}
+
+
+
+/* animasi */
+@keyframes zoomdanfade {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slidedownfade {
+    0% {
+        opacity: 0;
+        margin-top: -20px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: auto;
+    }
+}
